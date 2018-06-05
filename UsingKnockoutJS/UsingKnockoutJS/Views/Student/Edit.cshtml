@@ -1,0 +1,63 @@
+﻿@model UsingKnockoutJS.Models.Student
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Student</h2>
+
+<div class="form-horizontal">
+
+    <hr>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="FirstName">FirstName</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="FirstName1" name="FirstName" type="text" value="" data-bind="value: FirstName">
+          
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="LastName">LastName</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="LastName1" name="LastName" type="text" value="" data-bind="value: LastName">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="Email">Email</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="Email1" name="Email" type="text" value="" data-bind="value: Email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="Country">Country</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="Country1" name="Country" type="text" value="" data-bind="value:Country">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="City">City</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="City1" name="City" type="text" value="" data-bind="value: City">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" data-bind="click: updateStudent" value="Update" class="btn btn-default">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var selectedStudent = '@Html.Raw(ViewBag.SelectedStudent)';
+</script>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+@section scripts{
+
+    <script src="~/Scripts/KoScripts/KoUpdate.js"></script>
+
+}

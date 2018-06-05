@@ -1,0 +1,62 @@
+﻿@model UsingKnockoutJS.Models.Student
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Student</h2>
+<div class="alert alert-success" role="alert" style="display:none; margin-top: 10px;"> Form has submitted with successful </div>
+<div class="alert alert-danger" role="alert" style="display:none; margin-top: 10px;">  Please check your submission </div>
+
+<div class="form-horizontal">
+   
+    <hr>
+     <div class="form-group">
+        <label class="control-label col-md-2" for="FirstName">First Name</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="FirstName1" name="FirstName" type="text" value="" data-bind="value: FirstName" placeholder="First Name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="LastName">Last Name</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="LastName1" name="LastName" type="text" value="" data-bind="value: LastName" placeholder="Last Name">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="Email">Email</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="Email1" name="Email" type="text" value="" data-bind="value: Email" placeholder="Email Address">
+           
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="Country">Country</label>
+        <div class="col-md-10">
+            <select class="form-control text-box single-line" id="Country1" name="Country" type="text" value="" data-bind="options: CountryList, value: Country, optionsCaption:'Choose your country ...'"></select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="City">City</label>
+        <div class="col-md-10">
+            <select class="form-control text-box single-line" id="City1" name="City" type="text" value="" data-bind="options: CityList,value: City, optionsCaption:'Choose your City ...'"></select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" data-bind="click: createStudent" value="Create" class="btn btn-default">
+        </div>
+    </div>
+
+
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+@section scripts{
+    <script src="~/Scripts/KoScripts/KoCreate.js"></script>
+}
+
